@@ -49,11 +49,11 @@ export default class Nav extends Vue {
     {
       category: "Categories",
       list: [
-        { icon: "mdi-camera", title: "Photography", url: "/about1" },
+        { icon: "mdi-camera", title: "Photography", url: "/photography" },
         {
           icon: "mdi-arrange-send-backward",
           title: "Graphic Design",
-          url: "/about1",
+          url: "/ui",
         },
         { icon: "mdi-message-video", title: "Video", url: "/about1" },
         { icon: "mdi-lead-pencil", title: "Illustrations", url: "/about1" },

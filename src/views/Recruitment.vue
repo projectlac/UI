@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <div class="title">
+      <div class="title text-center">
         <h4 class="text-h4 mt-5">Recruitment</h4>
         <div class="divider mb-2 mx-auto"></div>
         <p class="text-subtitle-1 mb-2">
@@ -10,8 +10,8 @@
       </div>
       <div class="content px-4">
         <v-row>
-          <v-col cols="12" md="3" v-for="l in list" :key="l.id">
-            <v-card class="mx-auto mb-2 mb-md-4 d-flex" :color="l.color" dark elevation="6" style="
+          <v-col cols="12" md="4" v-for="l in list" :key="l.id">
+            <v-card class="mx-auto mb-2 mb-md-4" :color="l.color" dark elevation="6" style="
     flex-wrap: wrap;">
               <v-card-text
                 class="text-subtitle-2 white--text font-weight-regular"
