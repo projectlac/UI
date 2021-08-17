@@ -7,10 +7,14 @@ export interface Provider {
     like:number,
     hasLike:boolean
 }
-export interface Item{
+export interface listCategory{
     icon: string,
     title: string,
     url: string
+}
+export interface Item{
+    category: string
+    list: Array<listCategory>
 }
 export interface AppsInYourPlan{
     id:number,

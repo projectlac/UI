@@ -21,7 +21,7 @@
   --scrollbar-bg: rgb(255 253 253 / 57%);
   --content-title-color: --theme-color;
 }
-.dark-mode{
+.dark-mode {
   position: fixed;
   right: 25px;
   bottom: 15px;
@@ -49,8 +49,10 @@ img {
 .search-bar {
   min-height: 35px !important;
 }
-.v-text-field.v-text-field--solo:not(.v-text-field--solo-flat) > .v-input__control > .v-input__slot {
-  box-shadow:  none !important;
+.v-text-field.v-text-field--solo:not(.v-text-field--solo-flat)
+  > .v-input__control
+  > .v-input__slot {
+  box-shadow: none !important;
 }
 .v-text-field__slot label {
   color: rgba(0, 0, 0, 0.54) !important;
@@ -92,7 +94,7 @@ img {
   color: var(--theme-color);
   padding: 20px 40px;
   height: 530px;
-  
+
   overflow: hidden;
   overflow-y: auto;
   background-color: var(--theme-bg-color);
@@ -142,7 +144,7 @@ img {
 @media screen and (max-width: 570px) {
   .content-wrapper-img {
     width: 110px;
- }
+  }
 }
 
 .content-text {
@@ -156,13 +158,13 @@ img {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
- }
- 
- .content-wrapper-context {
+}
+
+.content-wrapper-context {
   max-width: 350px;
- }
- 
- .content-button {
+}
+
+.content-button {
   background-color: #3a6df0;
   border: none;
   padding: 8px 26px;
@@ -172,8 +174,8 @@ img {
   cursor: pointer;
   transition: 0.3s;
   white-space: nowrap;
- }
- .content-section {
+}
+.content-section {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -209,18 +211,17 @@ img {
 .content-section ul li:hover {
   background-color: var(--theme-bg-color);
 }
-.bg-theme{
+.bg-theme {
   background-color: var(--theme-bg-color) !important;
   border: 1px solid var(--border-color);
-  
 }
 .v-card {
-  transition: background-color .4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .v-card:not(.on-hover) {
   background-color: var(--theme-bg-color) !important;
- }
+}
 /* .bg-theme:hover{
   background-color: var(--hover-menu-bg) !important;
 } */
@@ -240,57 +241,58 @@ img {
   flex-shrink: 0;
 }
 
-.product-list{
+.product-list {
   background-color: var(--theme-bg-color);
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border-color);
   padding-left: 0 !important;
-
 }
-.product-list li{
+.product-list li {
   display: flex;
-  padding: 7px 0 ;
-  border-bottom: 1px solid var(--border-color) ;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-color);
 }
-.product-list li:last-child{
-  border: none
+.product-list li:last-child {
+  border: none;
 }
-.avatar-product{
+.avatar-product {
   width: 74px;
   display: flex;
   align-items: center;
   padding-left: 24px;
 }
-.name-product{
+.name-product {
   width: 250px;
   display: flex;
   padding: 0px 15px;
   align-items: center;
 }
-.icon-product{
+.icon-product {
   width: 25px;
   display: flex;
   padding: 0px 15px;
   align-items: center;
 }
-.action-product{
+.action-product {
   width: 250px;
   display: flex;
   padding: 0px 15px;
   align-items: center;
   justify-content: flex-end;
 }
-.update-product{
+.update-product {
   width: calc(100% - 30px - 30px - 250px - 40px - 30px - 250px);
   display: flex;
   padding: 0px 15px;
   align-items: center;
 }
 .v-main__wrap:before {
-  background: linear-gradient( 
-180deg
-, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.45) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 255, 255, 0.45) 100%
+  );
   position: absolute;
   content: "";
   top: 0;
@@ -298,61 +300,70 @@ img {
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width:768px) {
-  .main__content{
+@media screen and (max-width: 768px) {
+  .main__content {
     padding: 20px 20px;
   }
   .avatar-product {
     width: 60px;
-    
+
     padding-left: 10px;
+  }
+  .action-product {
+    width: calc(100% - 60px - 120px - 30px - 15px);
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .name-product {
+    width: 120px;
+
+    padding: 0px 0 0 15px;
+  }
 }
-.action-product {
-  width: calc(100% - 60px - 120px - 30px - 15px);
-  display: flex;
-  padding: 0px;
-  align-items: center;
-  justify-content: flex-end;
-}
-.name-product {
-  width: 120px;
- 
-  padding: 0px 0 0 15px;
- 
-}
-}
-.theme--dark .v-main__wrap:before{
+.theme--dark .v-main__wrap:before {
   width: 0%;
 }
-.theme--dark .black--text{
+.theme--dark .black--text {
   color: #fff !important;
 }
-.theme--dark{
+.theme--dark {
   --theme-bg-color: rgba(16 18 27 / 40%);
-    --border-color: rgba(113 119 144 / 25%);
-    --theme-color: #f9fafb;
-    --inactive-color: rgb(113 119 144 / 78%);
-    --body-font: "Poppins", sans-serif;
-    --hover-menu-bg: rgba(12 15 25 / 30%);
-    --content-title-color: #999ba5;
-    --content-bg: rgb(146 151 179 / 13%);
-    --button-inactive: rgb(249 250 251 / 55%);
-    --dropdown-bg: #21242d;
-    --dropdown-hover: rgb(42 46 60);
-    --popup-bg: rgb(22 25 37);
-    --search-bg: #14162b;
-    --overlay-bg: rgba(36, 39, 59, 0.3);
-    --scrollbar-bg: rgb(1 2 3 / 40%);
+  --border-color: rgba(113 119 144 / 25%);
+  --theme-color: #f9fafb;
+  --inactive-color: rgb(113 119 144 / 78%);
+  --body-font: "Poppins", sans-serif;
+  --hover-menu-bg: rgba(12 15 25 / 30%);
+  --content-title-color: #999ba5;
+  --content-bg: rgb(146 151 179 / 13%);
+  --button-inactive: rgb(249 250 251 / 55%);
+  --dropdown-bg: #21242d;
+  --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
+  --search-bg: #14162b;
+  --overlay-bg: rgba(36, 39, 59, 0.3);
+  --scrollbar-bg: rgb(1 2 3 / 40%);
 }
-.theme--dark .v-input__slot{
+.theme--dark .v-input__slot {
   background-color: #14162b !important;
 }
-.theme--dark .v-text-field__slot label, .theme--dark .v-input__icon i{
+.theme--dark .v-text-field__slot label,
+.theme--dark .v-input__icon i {
   color: #fff !important;
 }
-.theme--dark .white{
+.theme--dark .white {
   background-color: #14162b !important;
 }
-.theme--dark .grey.lighten-2{
+.theme--dark .grey.lighten-2 {
   background-color: #080a21 !important;
+}
+.theme--light.v-list-item--active:hover::before,
+.theme--light.v-list-item--active::before,
+.theme--dark.v-list-item--active:hover::before,
+.theme--dark.v-list-item--active::before {
+  opacity: 0;
+}
+.nav-active a.is-active , .nav-active a.is-active i{
+  color: rgb(99, 72, 255) !important;
 }

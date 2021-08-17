@@ -5,7 +5,7 @@
         <div class="app">
           <Header />
           <v-divider></v-divider>
-          <v-row class="ma-0 ma-md-auto">
+          <v-row class="ma-0 ma-md-0">
             <v-col cols="2" class="pr-0 hidden-xs-only">
               <Nav />
             </v-col>
