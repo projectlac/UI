@@ -75,7 +75,7 @@ img {
 }
 .wrapper {
   overflow-y: auto;
-  height: 90vh;
+  height: 80vh;
 }
 
 ::-webkit-scrollbar {

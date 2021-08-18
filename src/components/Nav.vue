@@ -1,5 +1,5 @@
 <template>
-  <div class="nav wrapper py-2 pl-5 text-left">
+  <div class="nav wrapper py-2 pl-4 text-left">
     <v-list dense class="py-0 transparent">
       
       <v-list-item-group color="primary" class="nav-active" v-for="(a, index) in Apps" :key="index">

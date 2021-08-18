@@ -61,11 +61,11 @@ export default class Header extends Vue {
   
   created(){
     this.getData()
-    console.log(this.listData)
+    // console.log(this.listData)
   }
   @Watch('dataSearch')
     wSearch(){
-      console.log(this.dataSearch)
+      // console.log(this.dataSearch)
     }
 }
 </script>
