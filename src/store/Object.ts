@@ -25,3 +25,9 @@ export interface AppsInYourPlan{
     isLoading:boolean,
     dialog:boolean
 }
+export interface Title{
+    id:number,
+    userId: number,
+    title: string,
+    body: string
+}

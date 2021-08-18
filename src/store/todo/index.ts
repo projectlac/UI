@@ -1,46 +1,53 @@
+import axios from "axios"
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex"
 import { RootState } from "../types"
 import { TodoState } from "./types"
-
+import { Title } from "../Object"
 const state: TodoState = {
-    category: "Tatca",
-    listTodo: [],
-    auth1: false
+    
+    listData: []
+  
 }
 export enum TodoGetters{
-    showCategory = "showCategory",
-    showAuth = "showAuth"
+    listData = "listData",
+    
 }
 const getters: GetterTree<TodoState,RootState> ={
-    [TodoGetters.showCategory](): string {
-        return state.category
+    [TodoGetters.listData](): any {
+        return state.listData
+        
     },
-    [TodoGetters.showAuth](): boolean {
-        return state.auth1
-    }
+  
 }
 
 export enum TodoMutations{
-    CHANGE_CATEGORY = "CHANGE_CATEGORY",
-    CHECK_AUTH = "CHECK_AUTH"
+    GET_DATA = "GET_DATA",
+
 }
 const mutations: MutationTree<TodoState> = {
-    [TodoMutations.CHANGE_CATEGORY](state, payload:string){
-        state.category = payload
+    [TodoMutations.GET_DATA](state, payload:Array<Title>){
+        state.listData = payload.map(p => p.title)
+           
+
     },
-    [TodoMutations.CHECK_AUTH](state){
-        state.auth1 = !state.auth1
-    }
+   
 }
 
 const actions:ActionTree<TodoState,RootState> ={
-    changeCategory({commit}, text){
-        commit("CHANGE_CATEGORY", text)
+    async getData({commit}): Promise<Array<Object>> {
+        try {
+            const res = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10')
+            commit("GET_DATA", res.data)
+            // console.log(res.data)
+            return res.data
+        } catch (error) {
+            console.log(error)
+            throw error ;
+        }
+        
         
     },
-    changeAuth({commit}){
-        commit("CHECK_AUTH")
-    }
+    
 }
 
 export const todo: Module<TodoState, RootState> = {

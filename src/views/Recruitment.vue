@@ -11,7 +11,7 @@
       <div class="content px-4">
         <v-row>
           <v-col cols="12" md="4" v-for="l in list" :key="l.id">
-            <v-card class="mx-auto mb-2 mb-md-4" :color="l.color" dark elevation="6" style="
+            <v-card class="mx-auto mb-2 mb-md-4 " :color="l.color" dark elevation="6" style="
     flex-wrap: wrap;">
               <v-card-text
                 class="text-subtitle-2 white--text font-weight-regular"

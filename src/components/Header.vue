@@ -10,15 +10,18 @@
         </v-tabs>
       </v-col>
       <v-col cols="8" md="3">
-        <v-text-field
+        <v-autocomplete
           solo
-          class="mt-1 search-bar black--text"
+          class="mt-1 text-subtitle-2 search-bar black--text font-weight-regular"
           dense
           hide-details="auto"
           background-color="rgb(255 255 255 / 31%)"
           label="Search something..."
+          :items="listData"
+          
+          v-model="dataSearch"
           prepend-inner-icon="mdi-magnify"
-        ></v-text-field>
+        ></v-autocomplete>
       </v-col>
       <v-col cols="4" md="2" class="d-flex align-center">
         <v-row justify="end" align="center" class="pr-5">
@@ -38,10 +41,31 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
+import { mapActions, mapGetters } from "vuex";
 
 @Component({
   components: {},
+  computed: { ...mapGetters({listData: "listData"})},
+  methods:{...mapActions({getData:"getData"})},
+  
 })
-export default class Header extends Vue {}
+export default class Header extends Vue {
+
+
+  dataSearch: string = ""
+
+  getData!: () => any
+  listData!: Array<string>
+
+  
+  created(){
+    this.getData()
+    console.log(this.listData)
+  }
+  @Watch('dataSearch')
+    wSearch(){
+      console.log(this.dataSearch)
+    }
+}
 </script>
