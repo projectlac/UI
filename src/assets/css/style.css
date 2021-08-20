@@ -219,7 +219,7 @@ img {
   transition: background-color 0.4s ease-in-out;
 }
 
-.v-card:not(.on-hover) {
+.v-card.bg-theme:not(.on-hover) {
   background-color: var(--theme-bg-color) !important;
 }
 /* .bg-theme:hover{
