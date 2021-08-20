@@ -12,7 +12,7 @@
       <v-col cols="8" md="3">
         <v-autocomplete
           solo
-          class="mt-1 text-subtitle-2 search-bar black--text font-weight-regular"
+          class="mt-1 text-subtitle-2 search-bar black--text font-weight-regular text-capitalize"
           dense
           hide-details="auto"
           background-color="rgb(255 255 255 / 31%)"
